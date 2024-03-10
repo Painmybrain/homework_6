@@ -1,0 +1,177 @@
+html {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 160px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.main-background {
+  padding-bottom: 200px;
+  background-color: black;
+  background-image: url(/assets/img/Background-main.png);
+  background-position: bottom left;
+  background-repeat: no-repeat;  
+}
+
+.bg-logo {
+  padding: 52px 0 0 52px ;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+  "header aside"
+  "main aside"
+  "footer aside";
+  grid-template-rows: 110px 1fr 110px;
+  margin: 50px 144px 0px 144px;  
+  border: 1px solid white;
+  border-radius: 32px;
+  background-image: url(/assets/img/screen.png);
+}
+
+/* Header */
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 1fr 6fr;
+  justify-items: stretch;
+  align-items: center;
+  height: 110px;
+  margin-left: 25px;
+}
+
+.logo-swoosh {
+  justify-self: stretch;
+}
+
+.header-nav {
+  display: grid;
+  grid-template-columns: max-content repeat(3, 1fr) 0.5fr 0.5fr;
+  margin-left: 150px;  
+}
+
+.header-item {
+  margin-right: 40px;
+  padding: 5px;
+  font-size: 26px;  
+}
+
+/* Main */
+
+.main {
+  grid-area: main;
+  margin-left: 25px;
+  margin-right: 10px;
+}
+
+.main-container {
+  padding: 56px;
+}
+
+.main-section {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+}
+
+.main-heading {
+  grid-column: 1/2;
+  grid-row: 1/3;  
+}
+
+.coursor {
+  grid-column: 2/3;
+  grid-row: 3/4;  
+}
+
+.main-text {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  align-self: center;
+  text-align: right;
+  font-size: 26px;  
+}
+
+.scroll-logo {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  justify-self: right;
+  align-self: self-end;  
+}
+
+/* Footer */
+
+.footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  margin-left: 25px;
+  margin-right: 10px;
+}
+
+.footer-item {
+  font-size: 26px; 
+}
+
+.footer-item-2 {
+  justify-self: center;
+}
+
+.footer-item-3 {
+  justify-self: end;
+}
+
+/* Aside */
+
+.aside {
+  grid-area: aside;
+  display: grid;
+  grid-template-rows: 1fr fit-content 1fr; 
+  padding: 10px; 
+  background-color: white;
+  font-size: 72px;
+  color: black;
+  border-radius: 0 32px 32px 0;
+}
+
+.aside-text {
+  grid-row: 3/4;
+  grid-column: 1/2;
+  text-align: end;
+  writing-mode: tb-rl;
+   transform:rotate(180deg);   
+}
+
+.aside-logo {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  align-self: end;  
+}
+
+.aside-text-top {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  text-align: start;
+  writing-mode: tb-rl;
+   transform:rotate(180deg);
+}
